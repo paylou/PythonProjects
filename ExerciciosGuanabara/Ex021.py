@@ -1,6 +1,7 @@
-from pydub import AudioSegment
+import pygame
 
-path = r"C:\Users\Paulo\Downloads\SONG"
-
-song = AudioSegment.from_mp3(path)
-play(song)
+pygame.init()
+pygame.mixer.music.load('SONG.mp3')
+pygame.mixer.music.play()
+pygame.event.wait()
+input()
